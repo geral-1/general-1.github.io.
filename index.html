@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-T">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Geraldine - Seguridad y Salud en el Trabajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados y para asegurar la fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Gris claro de fondo */
+            color: #1f2937; /* Gris oscuro para texto principal */
+        }
+        /* Estilo para la navegación activa */
+        .nav-link.active {
+            color: #2563eb; /* Azul para el enlace activo */
+            font-weight: 600;
+        }
+        /* Animación suave para el scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Colores temáticos para SST (Seguridad y Salud en el Trabajo) */
+        :root {
+            --primary-color: #00796b; /* Verde azulado oscuro (profesional, confianza) */
+            --secondary-color: #0288d1; /* Azul claro (seriedad, calma) */
+            --accent-color: #fbc02d; /* Amarillo (atención, alerta positiva) */
+        }
+        .bg-primary { background-color: var(--primary-color); }
+        .text-primary { color: var(--primary-color); }
+        .border-primary { border-color: var(--primary-color); }
+
+        .bg-secondary { background-color: var(--secondary-color); }
+        .text-secondary { color: var(--secondary-color); }
+
+        .bg-accent { background-color: var(--accent-color); }
+        .text-accent { color: var(--accent-color); }
+
+        /* Estilo para botones */
+        .btn {
+            @apply inline-block px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-md transition-transform duration-300 ease-in-out;
+        }
+        .btn-primary {
+            @apply bg-primary hover:bg-opacity-90 transform hover:scale-105;
+        }
+        .btn-secondary {
+            @apply bg-secondary hover:bg-opacity-90 transform hover:scale-105;
+        }
+
+        /* Estilo para las tarjetas de proyecto */
+        .project-card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl;
+        }
+        .project-card img {
+            @apply w-full h-56 object-cover;
+        }
+
+        /* Mejoras visuales para encabezados de sección */
+        .section-title {
+            @apply text-3xl font-bold mb-2 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-10 text-center;
+        }
+
+        /* Asegurar esquinas redondeadas en más elementos */
+        input, textarea, button, select, a, div, section, article, aside, header, footer, nav, main {
+            @apply rounded-lg;
+        }
+        img {
+            @apply rounded-lg;
+        }
+        /* Excepciones para redondeo si es necesario (ej. badges pequeños) */
+        .badge {
+            @apply rounded-full;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md fixed w-full z-50 top-0 rounded-b-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-primary">
+                GERALDINE <span class="text-sm font-normal text-gray-500 block sm:inline">/ Profesional SST</span>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Inicio</a>
+                <a href="#acerca-de-mi" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Acerca de Mí</a>
+                <a href="#proyectos" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Proyectos</a>
+                <a href="#habilidades" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Habilidades</a>
+                <a href="#contacto" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Contacto</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg rounded-b-lg">
+            <a href="#inicio" class="block nav-link text-gray-700 hover:text-primary px-6 py-3 transition-colors duration-300">Inicio</a>
+            <a href="#acerca-de-mi" class="block nav-link text-gray-700 hover:text-primary px-6 py-3 transition-colors duration-300">Acerca de Mí</a>
+            <a href="#proyectos" class="block nav-link text-gray-700 hover:text-primary px-6 py-3 transition-colors duration-300">Proyectos</a>
+            <a href="#habilidades" class="block nav-link text-gray-700 hover:text-primary px-6 py-3 transition-colors duration-300">Habilidades</a>
+            <a href="#contacto" class="block nav-link text-gray-700 hover:text-primary px-6 py-3 transition-colors duration-300">Contacto</a>
+        </div>
+    </header>
+
+    <main class="pt-20"> <section id="inicio" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-secondary text-white py-20 px-6 rounded-b-xl">
+            <div class="text-center max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    GERALDINE
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 font-light">
+                    Profesional especializada en Seguridad y Salud en el Trabajo. Comprometida con la creación de entornos laborales seguros y productivos.
+                </p>
+                <a href="#acerca-de-mi" class="btn bg-white text-primary hover:bg-gray-100 transform hover:scale-105">
+                    Conoce Más Sobre Mí <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="acerca-de-mi" class="py-20 px-6 bg-white">
+            <div class="container mx-auto">
+                <h2 class="section-title text-primary">Acerca de Mí</h2>
+                <p class="section-subtitle">Un poco sobre mi trayectoria y enfoque profesional.</p>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/00796B/FFFFFF?text=Profesional+SST" alt="Foto de GERALDINE" class="w-full max-w-sm mx-auto h-auto object-cover rounded-xl shadow-xl">
+                    </div>
+                    <div class="md:w-2/3 text-gray-700 text-lg leading-relaxed">
+                        <p class="mb-4">
+                            ¡Hola! Soy GERALDINE, una apasionada profesional de la Seguridad y Salud en el Trabajo (SST) con 2 años de experiencia en [Menciona áreas clave como: implementación de sistemas de gestión, evaluación de riesgos, capacitación de personal, investigación de incidentes, etc.].
+                        </p>
+                        <p class="mb-4">
+                            Mi objetivo principal es contribuir a la creación de culturas preventivas sólidas dentro de las organizaciones, garantizando el bienestar de los trabajadores y el cumplimiento normativo. Creo firmemente que un ambiente de trabajo seguro es fundamental para la productividad y el éxito empresarial.
+                        </p>
+                        <p class="mb-4">
+                            A lo largo de mi carrera, he desarrollado habilidades en [Menciona 2-3 habilidades blandas o técnicas relevantes, ej: comunicación efectiva, liderazgo de equipos, análisis de datos, manejo de normatividad SST]. Busco constantemente actualizar mis conocimientos para aplicar las mejores prácticas y soluciones innovadoras en el campo de la SST.
+                        </p>
+                        <a href="#contacto" class="btn btn-secondary mt-6">
+                            Contáctame <i class="fas fa-envelope ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-20 px-6 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="section-title text-primary">Mis Proyectos Destacados</h2>
+                <p class="section-subtitle">Algunos ejemplos de mi trabajo y contribuciones en SST.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/0288D1/FFFFFF?text=Implementaci%C3%B3n+SG-SST" alt="Imagen del Proyecto Implementación SG-SST">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-secondary">Implementación SG-SST Empresa X</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Lideré la implementación completa del Sistema de Gestión de Seguridad y Salud en el Trabajo para una empresa del sector construcción, logrando la certificación [si aplica] y una reducción del 90% en la tasa de accidentalidad.
+                            </p>
+                            <a href="#" class="text-primary hover:underline font-medium">Ver más detalles (opcional)</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/00796B/FFFFFF?text=Capacitaci%C3%B3n+Riesgos" alt="Imagen del Proyecto Programa de Capacitación en Riesgos">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-secondary">Programa de Capacitación en Riesgos</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Diseño y ejecución de un programa integral de capacitación sobre identificación y control de riesgos laborales para más de 2 empleados, mejorando significativamente la cultura preventiva.
+                            </p>
+                            <a href="#" class="text-primary hover:underline font-medium">Ver más detalles (opcional)</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/FBC02D/333333?text=An%C3%A1lisis+Incidentes" alt="Imagen del Proyecto Investigación y Análisis de Incidentes">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-secondary">Investigación y Análisis de Incidentes</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Aplicación de metodologías avanzadas para la investigación de incidentes laborales, identificando causas raíz y proponiendo medidas correctivas efectivas que previnieron recurrencias.
+                            </p>
+                            <a href="#" class="text-primary hover:underline font-medium">Ver más detalles (opcional)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-20 px-6 bg-white">
+            <div class="container mx-auto">
+                <h2 class="section-title text-primary">Mis Habilidades</h2>
+                <p class="section-subtitle">Competencias clave que aplico en mi desempeño profesional.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <i class="fas fa-shield-alt text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Gestión de Riesgos Laborales</h3>
+                        <p class="text-gray-600 text-sm">Identificación, evaluación y control de riesgos.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <i class="fas fa-clipboard-list text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Sistemas de Gestión SST</h3>
+                        <p class="text-gray-600 text-sm">ISO 45001, Decretos locales (ej. 1072 en Colombia).</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <i class="fas fa-chalkboard-teacher text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Capacitación y Formación</h3>
+                        <p class="text-gray-600 text-sm">Diseño e impartición de programas de SST.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <i class="fas fa-gavel text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Legislación SST</h3>
+                        <p class="text-gray-600 text-sm">Conocimiento y aplicación de normatividad vigente.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <i class="fas fa-microscope text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Investigación de Accidentes</h3>
+                        <p class="text-gray-600 text-sm">Análisis de causas y planes de acción.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <i class="fas fa-hard-hat text-4xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Inspecciones de Seguridad</h3>
+                        <p class="text-gray-600 text-sm">Verificación de condiciones seguras de trabajo.</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-20 px-6 bg-primary text-white">
+            <div class="container mx-auto text-center">
+                <h2 class="section-title text-white">Ponerse en Contacto</h2>
+                <p class="section-subtitle text-gray-200">Estoy disponible para nuevas oportunidades y colaboraciones.</p>
+                <div class="mt-10 space-y-6 md:space-y-0 md:flex md:justify-center md:space-x-10">
+                    <div class="flex items-center justify-center bg-white/20 p-6 rounded-xl backdrop-blur-sm hover:bg-white/30 transition-colors duration-300">
+                        <i class="fas fa-envelope text-3xl text-accent mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Correo Electrónico</h3>
+                            <a href="mailto:tuemail@example.com" class="text-lg hover:underline text-gray-50">tuemail@example.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center bg-white/20 p-6 rounded-xl backdrop-blur-sm hover:bg-white/30 transition-colors duration-300">
+                        <i class="fab fa-linkedin text-3xl text-accent mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">LinkedIn</h3>
+                            <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="text-lg hover:underline text-gray-50">
+                                Tu Perfil de LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-12 text-gray-300">
+                    No dudes en enviarme un mensaje. ¡Espero saber de ti!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 px-6 text-center rounded-t-lg">
+        <p>&copy; <span id="currentYear"></span> GERALDINE. Todos los derechos reservados.</p>
+        <p class="text-sm mt-1">Diseño inspirado y desarrollado con <i class="fas fa-heart text-red-500"></i>.</p>
+    </footer>
+
+    <script>
+        // JavaScript para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('.nav-link'); // Para cerrar menú al hacer clic
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Cambiar icono de hamburguesa a X y viceversa
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Actualizar año en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Observador de intersección para resaltar enlace de navegación activo
+        const sections = document.querySelectorAll('section[id]');
+        const desktopNavLinks = document.querySelectorAll('header nav a.nav-link');
+        const mobileNavLinks = document.querySelectorAll('#mobile-menu a.nav-link');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.5 // 50% de la sección visible
+        };
+
+        const activateLink = (links, sectionId) => {
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        };
+        
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    activateLink(desktopNavLinks, sectionId);
+                    activateLink(mobileNavLinks, sectionId);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Asegurar que el enlace "Inicio" esté activo al cargar la página si está en la parte superior
+        window.addEventListener('load', () => {
+            if (window.scrollY < window.innerHeight * 0.5) { // Si la parte superior de la página es visible
+                 activateLink(desktopNavLinks, 'inicio');
+                 activateLink(mobileNavLinks, 'inicio');
+            }
+        });
+
+    </script>
+</body>
+</html>
